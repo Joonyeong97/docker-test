@@ -12,6 +12,6 @@ FROM python:3.8.10
 
 RUN apt-get install wget ca-certificates && \
     wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc |apt-key add - && \
-    sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list' && \
+    sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list' && \
     apt-get update --yes && \
     apt-get install postgresql postgresql-contrib
