@@ -1,5 +1,6 @@
-FROM python:3.8.10
+#FROM python:3.8.10
 
+FROM nvidia/cuda:11.2.2-cudnn8-runtime-ubuntu20.04
 #RUN apt-get update --yes && \
 #    apt-get install wget ca-certificates && \
 #    sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list' && \
