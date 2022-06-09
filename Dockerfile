@@ -1,6 +1,6 @@
 #FROM python:3.8.10
-nvidia/cuda:11.2.2-cudnn8-runtime-ubuntu20.04
-FROM
+
+FROM nvidia/cuda:11.2.2-cudnn8-runtime-ubuntu20.04
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A4B469963BF863CC
 RUN apt-get update --yes && \
